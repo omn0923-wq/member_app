@@ -24,5 +24,14 @@ public class MemberDto {
         member.setAddress(dto.getAddress());
         return member;
     }
-//    Member Entity -> MemberDto(DTO)
+
+    //    Member Entity -> MemberDto(DTO)
+    public static MemberDto toDto(Member member) {
+        return new MemberDto(
+                member.getId(),
+                member.getName(),
+                member.getAge(),
+                member.getAddress()
+        );
+    }
 }
